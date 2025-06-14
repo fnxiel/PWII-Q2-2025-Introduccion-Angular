@@ -1,0 +1,15 @@
+@if (estado == 'existencia')
+{
+  <li >
+    <h3>Nombre del producto: {{nombre}}</h3>
+    <p>Descripcion: {{descripcion}}</p>
+  </li>
+}
+@if (estado == 'agotado')
+{
+  <li>
+    <h2>producto Agotado</h2>
+    <h3>Nombre del producto: {{nombre}}</h3>
+    <p>Descripcion: {{descripcion}}</p>
+  </li>
+}
