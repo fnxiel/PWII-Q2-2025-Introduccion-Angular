@@ -1,0 +1,18 @@
+<h1>Contamos con informacion de {{pokemons.count}} pokemons</h1>
+<p></p>
+
+@if (detallePokemonSeleccionado) {
+    <h1>{{detallePokemonSeleccionado.id}} - {{detallePokemonSeleccionado.name}}</h1>
+    <img src={{detallePokemonSeleccionado.sprites.back_default}} alt="">
+    <img src={{detallePokemonSeleccionado.sprites.front_default}} alt="">
+}
+
+@for (pokemon of pokemons.results; track pokemons.results ) {
+    <div>
+        <h2>{{pokemon.name}}</h2>
+        <a href={{pokemon.url}}>{{pokemon.url}}</a>
+        <button (click)="seleccionarPokemon(pokemon)">Seleccionar</button>
+    </div>
+    } @empty {
+    <li>No hay pokemon para mostrar</li>
+    }
